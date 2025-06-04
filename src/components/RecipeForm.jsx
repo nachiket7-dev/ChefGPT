@@ -19,7 +19,7 @@ const RecipeForm = ({ fetchRecipe }) => {
 
   const handleGenerate = () => {
     if (ingredients.length > 0) {
-      fetchRecipe(ingredients.join(', '));
+      fetchRecipe(ingredients);
     } else {
       alert('Please add at least one ingredient');
     }
