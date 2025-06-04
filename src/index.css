@@ -395,3 +395,174 @@ button {
   color: #fff;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
+  }
+
+  .navbar .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: auto;
+    z-index: 1100;
+  }
+
+  .navbar .hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+
+  .navbar .hamburger .bar.open:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .navbar .hamburger .bar.open:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar .hamburger .bar.open:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .navbar .nav-links.open {
+    display: flex;
+  }
+
+  .navbar .nav-links a,
+  .navbar .nav-links button {
+    margin: 8px 20px;
+    width: auto;
+    text-align: left;
+    color: white;
+  }
+
+  .landing h1 {
+    font-size: 2.5rem;
+  }
+
+  .landing p {
+    font-size: 1.1rem;
+  }
+
+  .get-started {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 1.2rem;
+  }
+
+  .login-form,
+  .recipe-form .ingredient input,
+  .ingredient-list,
+  .recipe-card .card,
+  .main-page {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .login-form {
+    padding: 30px 20px;
+  }
+
+  .recipe-form .ingredient input {
+    width: 100%;
+  }
+
+  .recipe-card {
+    padding: 10px;
+  }
+
+  .recipe-card .card {
+    padding: 20px;
+  }
+
+  .ingredient-list {
+    padding: 15px;
+  }
+
+  .main-page h1 {
+    font-size: 1.8rem;
+  }
+
+  .recipe-card .card h2 {
+    font-size: 1.5rem;
+  }
+
+  .recipe-card .card h3 {
+    font-size: 1.1rem;
+  }
+
+  .recipe-card .card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 10px;
+  }
+
+  .landing h1 {
+    font-size: 2rem;
+  }
+
+  .landing p {
+    font-size: 1rem;
+  }
+
+  .get-started {
+    font-size: 1rem;
+  }
+
+  .login-form,
+  .recipe-form .ingredient input,
+  .ingredient-list,
+  .recipe-card .card,
+  .main-page {
+    width: 95%;
+  }
+
+  .main-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .recipe-card .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .recipe-card .card h3 {
+    font-size: 1rem;
+  }
+
+  .recipe-card .card p {
+    font-size: 0.9rem;
+  }
+}
+
